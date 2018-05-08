@@ -1,5 +1,7 @@
 TicTacToe
 
+Technologies used: Spring boot for the rest controller, MongoDB for the storage.
+
 Steps to Deploy (on windows powershell)
 
     1. Clone the repo
