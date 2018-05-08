@@ -1,15 +1,12 @@
 TicTacToe
 
-Author: Firoz
-
 Steps to Deploy (on windows powershell)
 
     1. Clone the repo
     2. cd to project folder : TicTacToe
     3. Build the application by running : mvn clean install
 
-Start minikube
-switch the docker instance inside minikube by running : minikube docker-env | Invoke-Expression (in powershell) or eval $(minikube docker-env) (in linux shell)
+Start minikube and switch docker to the instance inside minikube by running : minikube docker-env | Invoke-Expression (in powershell)
 
     3. Create the game image by running : docker build -t fx/tictactoe:v1 .
     4. Create the kubernetes namespace by running : kubectl.exe create -f .\k8s_deployments\fx_ns.yaml
