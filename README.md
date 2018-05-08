@@ -26,7 +26,7 @@ Create a new game:
     URL: http://{host:port}/game
     METHOD: POST
     BODY: (form-data): 
-        input={"name"="your_name","character":"O"}
+        input={"name":"your_name","character":"O"}
     
     expected output: 
         Created new game with ID:x
@@ -49,7 +49,7 @@ Make a move in game with ID x to coordinates row=A,column=B:
     URL: http://{host:port}/game/x/move
     METHOD: POST
     BODY: (form-data): 
-        input={"row"="A","column":"B"}
+        input={"row":"A","column":"B"}
         
     expected output: 
           A B C
