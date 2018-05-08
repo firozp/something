@@ -2,7 +2,7 @@ TicTacToe
 
 Author: Firoz
 
-Steps to Deploy
+Steps to Deploy (on windows powershell)
 
     1. Clone the repo
     2. cd to project folder : TicTacToe
