@@ -9,7 +9,7 @@ Steps to Deploy
     3. Build the application by running : mvn clean install
 
 Start minikube
-switch the docker instance inside minikube by running : minikube docker-env | Invoke-Expression (in powershell) or eval(minikube docker-env) (in linux shell)
+switch the docker instance inside minikube by running : minikube docker-env | Invoke-Expression (in powershell) or eval $(minikube docker-env) (in linux shell)
 
     3. Create the game image by running : docker build -t fx/tictactoe:v1 .
     4. Create the kubernetes namespace by running : kubectl.exe create -f .\k8s_deployments\fx_ns.yaml
