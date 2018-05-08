@@ -2,6 +2,7 @@ TicTacToe
 Author: Firoz
 
 Steps to Deploy
+
     1. Clone the repo
     2. cd to project folder : TicTacToe
     3. Build the application by running : mvn clean install
