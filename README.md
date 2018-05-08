@@ -1,7 +1,9 @@
 TicTacToe
+
 Author: Firoz
 
 Steps to Deploy
+
     1. Clone the repo
     2. cd to project folder : TicTacToe
     3. Build the application by running : mvn clean install
@@ -20,6 +22,7 @@ switch the docker instance inside minikube by running : minikube docker-env | In
 Open the REST client of your choice and use the following URLs to play the game:
 
 Create a new game:
+
     URL: http://{host:port}/game
     METHOD: POST
     BODY: (form-data): 
@@ -29,6 +32,7 @@ Create a new game:
         Created new game with ID:x
 
 View game with ID x:
+
     URL: http://{host:port}/game/x
     METHOD: GET
         
@@ -41,6 +45,7 @@ View game with ID x:
         Game ongoing, your turn ...
 
 Make a move in game with ID x to coordinates row=A,column=B:
+
     URL: http://{host:port}/game/x/move
     METHOD: POST
     BODY: (form-data): 
