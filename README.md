@@ -58,3 +58,5 @@ Make a move in game with ID x to coordinates row=A,column=B:
         C|X| | |
 
         Game ongoing, your turn ...
+
+Used jMeter to perform performance testing, test plan is attached in repo.
