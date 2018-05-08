@@ -59,6 +59,68 @@ public class Board {
         }
 
     }
+    public char hasWinner(){
+        char winner = '#';
+        for (int i=0;i<3;i++){
+            winner = checkRowWinner(i);
+            if( winner != '#'){
+                return winner;
+            }
+        }
+        for (int i=0;i<3;i++){
+            winner = checkColumnWinner(i);
+            if(winner != '#'){
+                return winner;
+            }
+        }
+
+        winner=checkDiagonalWinner();
+        if (winner != '#') return winner;
+
+        return winner;
+    }
+
+    public char checkRowWinner(int row){
+
+        if ( boardEntries[row][0] == '*' || boardEntries[row][1] == '*' || boardEntries[row][2] == '*'){
+            return '#';
+        }
+
+        if( (boardEntries[row][0] == boardEntries[row][1]) && (boardEntries[row][1] == boardEntries[row][2])){
+            return boardEntries[row][0];
+        }else{
+            return '#';
+        }
+    }
+
+    public char checkColumnWinner(int column){
+
+        if ( boardEntries[0][column] == '*' || boardEntries[1][column] == '*' || boardEntries[2][column] == '*'){
+            return '#';
+        }
+
+        if( (boardEntries[0][column] == boardEntries[1][column]) && (boardEntries[1][column] == boardEntries[2][column])){
+            return boardEntries[0][column];
+        }else{
+            return '#';
+        }
+    }
+
+    public char checkDiagonalWinner(){
+        if (  !(boardEntries[0][0] =='*' || boardEntries[1][1] =='*' || boardEntries[2][2] =='*')) {
+            if ((boardEntries[0][0] == boardEntries[1][1]) && (boardEntries[1][1] == boardEntries[2][2])) {
+                return boardEntries[0][0];
+            }
+        }
+        if (  !(boardEntries[0][2] =='*' || boardEntries[1][1] =='*' || boardEntries[2][0] =='*')) {
+            if ((boardEntries[0][2] == boardEntries[1][1]) && (boardEntries[1][1] == boardEntries[2][0])) {
+                return boardEntries[0][2];
+            }
+        }
+        return '#';
+    }
+
+
 
     public char[][] getBoardEntries() {
         return boardEntries;

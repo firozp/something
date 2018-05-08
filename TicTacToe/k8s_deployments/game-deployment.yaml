@@ -1,0 +1,21 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: tictactoe
+  namespace: fx
+  labels:
+    io.kompose.service: tictactoe
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        io.kompose.service: tictactoe
+    spec:
+      containers:
+      - image: fx/tictactoe:v1
+        name: web
+        ports:
+        - containerPort: 8080
+        imagePullPolicy: IfNotPresent
+      restartPolicy: Always
