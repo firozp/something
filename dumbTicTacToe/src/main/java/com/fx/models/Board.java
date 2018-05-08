@@ -1,8 +1,12 @@
 package com.fx.models;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Board {
 
     char[][] boardEntries= new char[3][3];
+    public List<Integer> availablePlaces = new ArrayList<Integer>();
 
     public Board(char[] gameState){
         int k=0;
@@ -12,6 +16,20 @@ public class Board {
                 k++;
             }
         }
+    }
+
+    public boolean movesAvailable(){
+        availablePlaces.clear();
+        int k=0;
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                if (boardEntries[i][j] == '*'){
+                    availablePlaces.add(k);
+                }
+                k++;
+            }
+        }
+        return availablePlaces.size()>0;
     }
 
     public String getGameState(){
